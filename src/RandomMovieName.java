@@ -7,7 +7,7 @@ public class RandomMovieName  {
     private int count;
     public RandomMovieName() {//parameterized constructor
         count=0;
-        movieNames = new String[30];
+        movieNames = new String[25];
         StoreMoviesName();
     }
     private void StoreMoviesName() {//Storing movies name in array
@@ -22,6 +22,9 @@ public class RandomMovieName  {
         catch(FileNotFoundException e) {
             System.out.println("The file does not exist at the location");
         }
+    }
+    public String[] getListOfMovies() {
+        return movieNames;
     }
     public String getRandomMovieName() {//getting random number of array
         int random = (int)(Math.random()*count);//generating a random number
